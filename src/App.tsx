@@ -1,24 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {splitIntoWords} from "./01-hello-tests/01";
 
+const sentensive = 'hello roman yo';
+const result = splitIntoWords(sentensive)
+
+console.log(result)
+console.log(result[0] === 'one')
+console.log(result[1] === 'two')
+console.log(result[2] === 'three')
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
     </div>
   );
 }
