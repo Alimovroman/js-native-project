@@ -1,3 +1,5 @@
+import {GovernmentBuildingsType, HouseType} from "../02-obj/02-02";
+
 export type PeopleType = {
     name: string
     age: number
@@ -34,3 +36,17 @@ const devs2 = pepole.map(m => ({
     firstName: m.name.split(' ')[0],
     lastName: m.name.split(' ')[1]
 }))
+
+export const createGreetingPeople = (pepole: Array<PeopleType>) => {
+    return pepole.map(m => `hello ${m.name.split(' ')[0]}`)
+}
+
+export const  getStreetTitlesOfGovermentsBuildings = (govermentBuildings: Array<GovernmentBuildingsType>) => {
+    const newGovermentBuildongs = govermentBuildings.map( b => b.address.street.title)
+    return newGovermentBuildongs
+}
+
+export const getStreetsTitleOfHouses = (houses: Array<HouseType>) => {
+    const newStreets = houses.map(s => s.address.street.title)
+    return newStreets
+}

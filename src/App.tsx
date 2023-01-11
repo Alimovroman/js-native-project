@@ -7,15 +7,25 @@ import {sum} from "./03 func/03";
 const sentensive = 'hello roman yo';
 const result = splitIntoWords(sentensive)
 
-console.log(result)
-console.log(result[0] === 'one')
-console.log(result[1] === 'two')
-console.log(result[2] === 'three')
+type UsersType = {
+  id: number
+  name: string
+}
+const users: Array<UsersType> = [
+  {id:1, name: 'sveta'},
+  {id:2, name: 'kotleta'},
+  {id:3, name: 'kolbaska'},
+  {id:4, name: 'ivan'},
+  {id:5, name: 'baklajan'},
+]
+
 function App() {
   sum(1,3)
   return (
     <div className="App">
-
+      <ul>
+        {users.map(u => <li key={u.id}>{u.name}</li>)}
+      </ul>
     </div>
   );
 }
