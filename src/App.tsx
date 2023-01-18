@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {splitIntoWords} from "./01-hello-tests/01";
 import {sum} from "./03 func/03";
+import User from "./06-callbacks/06";
 
 const sentensive = 'hello roman yo';
 const result = splitIntoWords(sentensive)
@@ -26,6 +27,7 @@ function App() {
       <ul>
         {users.map(u => <li key={u.id}>{u.name}</li>)}
       </ul>
+      <User />
     </div>
   );
 }
